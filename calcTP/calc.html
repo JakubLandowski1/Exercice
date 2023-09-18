@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/calc.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="titre">Calculator3000</div>
+        <div class="ecranCalc" id="result"></div>
+        <div class="ecranResult" id="resultCalc"> </div>
+        <div class="pavNum">
+            <button data-key="8" id="output" class="btn div1"  onclick="effacer()">C</button>
+            <button data-key="53" id="output" class="btn div2"  onclick="afficher('(')">(</button>
+            <button data-key="219" id="output" class="btn div3"  onclick="afficher(')')">)</button>
+            <button data-key="111" id="output" class="btn div4"  onclick="afficher('/')">/</button>
+            <button data-key="103" id="output" class="btn div5"  onclick="afficher('7')">7</button>
+            <button data-key="104" id="output" class="btn div6"  onclick="afficher('8')">8</button>
+            <button data-key="105" id="output" class="btn div7"  onclick="afficher('9')">9</button>
+            <button data-key="106" id="output" class="btn div8"  onclick="afficher('*')">*</button>
+            <button data-key="100" id="output" class="btn div9"  onclick="afficher('4')">4</button>
+            <button data-key="101" id="output" class="btn div10" onclick="afficher('5')">5</button>
+            <button data-key="102" id="output" class="btn div11" onclick="afficher('6')">6</button>
+            <button data-key="109" id="output" class="btn div12" onclick="afficher('-')">-</button>
+            <button data-key="97" id="output" class="btn div13" onclick="afficher('1')">1</button>
+            <button data-key="98" id="output" class="btn div14" onclick="afficher('2')">2</button>
+            <button data-key="99" id="output" class="btn div15" onclick="afficher('3')">3</button>
+            <button data-key="107" id="output" class="btn div16" onclick="afficher('+')">+</button>
+            <button data-key="96" id="output" class="btn div17" onclick="afficher('0')">0</button>
+            <button data-key="110" id="output" class="btn div18" onclick="afficher('.')">.</button>
+            <button data-key="13" id="output" class="btn div19" onclick="calculer()">=</button>
+        </div>
+
+    </div>
+
+
+    <script src="/calc.js"></script>
+</body>
+
+</html>

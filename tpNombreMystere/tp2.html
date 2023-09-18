@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tp2.css">
+</head>
+
+<body>
+    <div>
+        <p class="titre"> <strong>Le nombre mystère</strong></p>
+        <p class="textInfo">J'ai généré un nombre entre 1 et 50 inclus</p>
+        <p class="textInfo">Essayez de le devnier en proposant ci-dessous</p>
+        
+        <div class="divNbCoup">
+            
+                
+                  <label for="name" class="txtNbCoup">Nombre de coup : <span class="nbCoup"></span> </label>
+                  <input type="number" name="name" id="nbUserHtml" required />
+                
+
+                  <input type="submit" value="Valider"  onclick="getValue()" id="btnValider"/>
+              
+
+        </div>
+        <button class="restart" onclick="rejouer()"> Rejouer</button>
+        <span class="spanInfo"></span>
+    </div>
+    
+
+    <script src="/tp2.js"></script>
+</body>
+
+</html>
