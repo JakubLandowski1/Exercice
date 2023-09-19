@@ -12,8 +12,11 @@ export class Parking {
     }
 
     pay(plate){
+        let bool = false;
+
         this.tabParking.forEach(element => {
-            if (plate === element.plate) {
+            if (plate === element.plate ) {
+                bool = true;
                 const today = new Date()
 
 
@@ -36,6 +39,9 @@ export class Parking {
             }
            
         });
+        if (bool === false ) {
+            alert("la voiture n'existe pas")
+        }
     }
 
 }
