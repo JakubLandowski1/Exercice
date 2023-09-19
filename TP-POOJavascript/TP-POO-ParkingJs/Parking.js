@@ -6,6 +6,8 @@ export class Parking {
     }
 
     inTab(plate) {
+
+
         if (plate === "") {
             alert("la plaque n'est pas valide")
         } else {
@@ -14,6 +16,7 @@ export class Parking {
             console.log(this.tabParking)
         }
     }
+
 
     pay(plate) {
         let bool = false;
@@ -27,16 +30,16 @@ export class Parking {
                 let duree = element.date - today
                 duree = (duree / 1000) / 60
                 if (duree <= 15) {
-                    console.log("0.8€")
+                    alert("0.8€")
                 }
                 if (duree > 15 && duree <= 30) {
-                    console.log("1.30€")
+                    alert("1.30€")
                 }
                 if (duree > 30 && duree <= 45) {
-                    console.log("1.7€")
+                    alert("1.7€")
                 }
                 if (duree > 45) {
-                    console.log("6€")
+                    alert("6€")
                 }
 
 
