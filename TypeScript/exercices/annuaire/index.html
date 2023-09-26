@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script type="module" src="./assets/js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-between">
+
+        <div class="p-3 mb-2 bg-dark text-white , divContact">
+            <h3>Contact</h3>
+
+            <hr>
+
+            <div class="contact"></div>
+
+            <hr>
+
+            <button class="addBtn"> add</button>
+        </div>
+        <div class="p-3 mb-2 bg-dark text-white, divDetails">
+            <div class="d-flex flex-column mb-3">
+                <h3>Détails</h3>
+
+                <hr>
+
+                <input type="text" id="firstname" name="firstname"  class="inptDetails" disabled>
+
+
+                <input type="text" id="lastname" name="lastname"  class="inptDetails" disabled>
+
+
+                <input type="date" id="dateOfBirth" name="dateOfBirth" class="inptDetails"  disabled>
+
+
+                <input type="text" id="email" name="email"  class="inptDetails" disabled>
+
+
+                <input type="text" id="phoneNumber" name="phoneNumber"  class="inptDetails" disabled>
+            </div>
+             <hr>
+            <div class="d-flex justify-content-end">
+                <button class="editBtn">Edit</button>
+                <button class="deleteBtn">Delete</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="d-flex flex-column mb-3 mt-3">
+
+        <input type="text" id="firstnameEdit" name="firstname">
+
+
+        <input type="text" id="lastnameEdit" name="lastname">
+
+
+        <input type="date" id="dateOfBirthEdit" name="dateOfBirth">
+
+
+        <input type="text" id="emailEdit" name="email">
+
+
+        <input type="text" id="phoneNumberEdit" name="phoneNumber">
+
+        <button class="editFormBtn">Edit</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

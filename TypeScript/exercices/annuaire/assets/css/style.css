@@ -1,0 +1,49 @@
+.btn {
+  display: block;
+  color: white;
+  margin: 5px;
+}
+
+.inptDetails{
+  margin: 5px;
+}
+
+.divContact{
+  margin-top: 2%;
+  border-radius: 5px;
+}
+
+.divDetails{
+  border-radius: 5px;
+  width: 65vw;
+  margin-top: 2%;
+}
+
+h3 {
+  color: white;
+}
+
+hr {
+  color: white;
+}
+
+.editBtn {
+  width: 10%;
+  color: black;
+  background-color: orange;
+  border-radius: 6px;
+}
+.deleteBtn {
+  width: 10%;
+  color: white;
+  background-color: red;
+  border-radius: 6px ;
+  margin-left: 1%;
+}
+.addBtn {
+  width: 100%;
+  color: white;
+  background-color: green;
+  border-radius: 6px ;
+  margin-left: 1%;
+}

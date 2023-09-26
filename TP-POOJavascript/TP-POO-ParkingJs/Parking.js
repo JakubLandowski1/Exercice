@@ -44,9 +44,10 @@ export class Parking {
 
 
             }
-
+            
         });
         if (bool === false) {
+
             alert("la voiture n'existe pas")
         }
     }
