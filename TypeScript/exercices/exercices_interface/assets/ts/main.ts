@@ -18,7 +18,7 @@ const tab : Personne[] = [
   {
     nom: "Toto Dupont",
     age: 35,
-    occupation: "Facteur"
+    occupation: "Facteur",
   },
   {
     nom: "Jeanne Doe",
@@ -39,4 +39,5 @@ const tab : Personne[] = [
 ]
 tab.forEach(element => {
   console.log(element.nom + " " +element.age) 
+ 
  });
