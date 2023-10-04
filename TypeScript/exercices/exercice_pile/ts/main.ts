@@ -7,7 +7,7 @@ class Pile<T>{
         this.tab = [];
     }
 
-    empiler(param: T){
+    empiler(param: T): void {
         this.tab.push(param)
     }
 

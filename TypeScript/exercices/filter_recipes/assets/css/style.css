@@ -1,0 +1,13 @@
+.btn{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.inputName{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.modal-dialog{
+    position: fixed;
+}
