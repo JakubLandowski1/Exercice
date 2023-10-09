@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 // function AlertDiv (element) {
 //     const color = element.color ?? "danger";
 //     const txt = element.text ?? "un probleme est survenu";
@@ -6,7 +6,7 @@ import { useState } from "react";
 //     const place = element.place ?? "m-5"
 //     const place2 = element.place2 ?? "center"
 
-
+// EXO 1
 //     return (
 //         <div className={ "alert alert-" + color +" "+ place + " " + "d-flex justify-content-" + place2} >
 //             <i className= {"bi " + icone }> </i>
@@ -17,9 +17,8 @@ import { useState } from "react";
 
 
 
-
+// EXO 2
 // function DisplayTab() {
-
 // const tab = [
 //     {
 //         id : 1,
@@ -32,28 +31,24 @@ import { useState } from "react";
 //         prenom : "toto3"
 //     }
 // ]
-
 //     return (
 //         <>
 //          <ul>
 //                 {tab.map((elem) => <li key={elem.id}> {elem.id} {elem.prenom}  {elem.nom}</li>)}
 //             </ul>
 //         </>
-
-
 //     )
-
 // }
 
 
+
+// EXO 3
 // const Add = () => {
 //     const [listingP, setListingP] = useState([])
 //     const [inputValue, setInputValue] = useState("")
-
 //     const addPersonToList = () => {
 //         setListingP([...listingP, inputValue])
 //     }
-
 //     const editInput = (event) =>  {
 //         setInputValue(event.target.value)
 //         console.log(inputValue)
@@ -69,16 +64,15 @@ import { useState } from "react";
 //             <button onClick={addPersonToList}>Add a Person</button>
 //         </>
 //     )
-
 // }
 
 
+// EXO 4
 // const FirstHookComponent = (props) => {
 //     const [valueInput, setValueInput] =useState("")
 //     const [valueInput2, setValueInput2] =useState("")
 //     const changeValueInput = (event) => {
 //         setValueInput( event.target.value)
-
 //     }
 //     const changeValueInput2 = (event) => {
 //         setValueInput2(event.target.value)
@@ -89,40 +83,29 @@ import { useState } from "react";
 //             <br />
 //             <t> Votre nom : </t><input type="text" onInput={changeValueInput2} />
 //             <p>Bonjour <b> {valueInput.charAt(0).toUpperCase()+ valueInput.slice(1) } {valueInput2.toUpperCase()}</b> bienvenue sur l'application! </p>
-
 //         </>
-
 //     )
-
-
 // }
 
 
-// const CompteurHookComponent = (props) => {
 
+// EXO 5
+// const CompteurHookComponent = (props) => {
 //     let [compteur, setCompteur] = useState(0)
 //     let [text, setText] = useState("")
-
-
 //     const incrementPlus = () => {
 //         if (compteur < props.val) {
 //             setCompteur(++compteur)
 //         display()
 //         }
-        
+ 
 //     }
-
-
 //     const incrementMoins = () => {
 //         if (compteur > 0 ) {
 //              setCompteur(--compteur)
 //              display()
-//         } 
-       
-        
+//         }      
 //     }
-
-
 //     const display= () => {
 //         if (compteur === 0) {
 //             setText("")
@@ -134,22 +117,16 @@ import { useState } from "react";
 //             setText("Fizz")
 //         } else {
 //              setText("")
-//         }
-
-        
+//         }    
 //     }
-
-
 //     return (
 //         <div>
-
 //             <button onClick={() => incrementMoins()}> - </button>
 //             <button onClick={() => incrementPlus()}> + </button>
 //             <p> {compteur} </p>
 //             <p> {text}  </p>
 //         </div>
 //     )
-
 // }
 
 

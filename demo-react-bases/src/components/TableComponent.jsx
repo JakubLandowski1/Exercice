@@ -1,25 +1,16 @@
 
+// EXO 6
+// const TableComponent = (props) => {
 
-const TableComponent = (props) => {
-    
-    
+//     return (
+//        <>   
+//          <ul>
+//             {props.user.map((elem, index) => (       
+//             <li key={index}>  {elem.firstname} | {elem.lastname} </li>)        
+//             )}
+//          </ul>      
+//         </>
+//     )
+// }
 
-    return (
-        <>
-         
-         <ul>
-            {props.user.map((elem, index) => (
-            
-            <li key={index}>  {elem.firstname} | {elem.lastname} </li>)
-            
-            
-            )}
-         </ul>
-           
-        </>
-    )
-
-
-}
-
-export default TableComponent
+// export default TableComponent
