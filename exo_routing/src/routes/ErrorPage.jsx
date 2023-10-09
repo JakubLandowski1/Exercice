@@ -1,11 +1,17 @@
-import { useRouteError } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from "./Navbar";
 
 const ErrorPage = () => {
-    const error = useRouteError()
+
     return (
+
         <>
-            <h1> Erreur - Page introuvable </h1>
-            <p> {error.data} </p>
+            <Navbar />
+            <div className=' h-100 d-flex align-items-center justify-content-center'>
+
+                <h1> Erreur - Page introuvable </h1>
+
+            </div>
         </>
     )
 }
