@@ -13,6 +13,16 @@ const FormContact = () => {
     const navigate = useNavigate();
     const [param] = useSearchParams();
     console.log(param)
+    let contactDefault = {
+        firstname: '',
+        lastname: '',
+        email: '',
+        tel: '',
+    }
+    if (param.get('mode')== 'edit') {
+        contactDefault = contact.find(elem => elem.id == param.get('id'))
+    }
+   
 
     const AddContact = (e) => {
         e.preventDefault();
@@ -50,31 +60,31 @@ const FormContact = () => {
                     <div className="form-group row">
                         <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Nom</label>
                         <div className="col-sm-10">
-                            <input type="text" className="form-control form-control-lg mt-3" ref={lastname} required/>
+                            <input type="text" className="form-control form-control-lg mt-3" ref={lastname} defaultValue={contactDefault.lastname } />
                         </div>
                     </div>
                     <div className="form-group row">
                         <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Prénom</label>
                         <div className="col-sm-10">
-                            <input type="text" className="form-control form-control-lg mt-3"  ref={firstname} />
+                            <input type="text" className="form-control form-control-lg mt-3" defaultValue={contactDefault.firstname } ref={firstname} />
                         </div>
                     </div>
                     <div className="form-group row">
                         <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Email</label>
                         <div className="col-sm-10">
-                            <input type="email" className="form-control form-control-lg mt-3" ref={email} />
+                            <input type="email" className="form-control form-control-lg mt-3" ref={email} defaultValue={contactDefault.email } />
                         </div>
                     </div>
                     <div className="form-group row">
                         <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">numéro de télephone</label>
                         <div className="col-sm-10">
-                            <input type="number" className="form-control form-control-lg mt-3" ref={tel} />
+                            <input type="number" className="form-control form-control-lg mt-3" ref={tel} defaultValue={contactDefault.tel} />
                         </div>
                     </div>
                     <div className="d-flex justify-content-end">
                         <button onClick={AddContact} className="btn btn-primary btn-lg btn-block mt-2"> Valider </button>
                     </div>
-                    
+
                 </form>
             </div>
 
