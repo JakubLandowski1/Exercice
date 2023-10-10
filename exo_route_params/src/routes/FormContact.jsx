@@ -16,63 +16,67 @@ const FormContact = () => {
 
     const AddContact = (e) => {
         e.preventDefault();
-        if (param.get('mode')=== 'edit') {
-            let contactUpdate =  contact.filter(elem => param.get('id') != elem.id)
+        if (param.get('mode') === 'edit') {
+            let contactUpdate = contact.filter(elem => param.get('id') != elem.id)
             contactUpdate.push(
                 {
-                    firstname : firstname.current.value, 
-                    lastname : lastname.current.value,
-                    email : email.current.value,
-                    tel : tel.current.value,
-                    id : parseInt(param.get('id'))
+                    firstname: firstname.current.value,
+                    lastname: lastname.current.value,
+                    email: email.current.value,
+                    tel: tel.current.value,
+                    id: parseInt(param.get('id'))
                 }
             )
             setContact(contactUpdate)
         } else
-        setContact([...contact,
-        {
-            firstname : firstname.current.value, 
-            lastname : lastname.current.value,
-            email : email.current.value,
-            tel : tel.current.value,
-            id : Date.now()
-        },
-        
-    ])
-    
-    navigate("/Contact")
-    } 
+            setContact([...contact,
+            {
+                firstname: firstname.current.value,
+                lastname: lastname.current.value,
+                email: email.current.value,
+                tel: tel.current.value,
+                id: Date.now()
+            },
+
+            ])
+
+        navigate("/Contact")
+    }
 
     return (
         <>
-            <form action="">
-                <div className="form-group row">
-                    <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Nom</label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control form-control-lg" ref={lastname} />
+            <div className="container mt-5 border border-dark rounded-2 bg-dark text-white">
+                <form className="m-5">
+                    <div className="form-group row">
+                        <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Nom</label>
+                        <div className="col-sm-10">
+                            <input type="text" className="form-control form-control-lg mt-3" ref={lastname} required/>
+                        </div>
                     </div>
-                </div>
-                <div className="form-group row">
-                    <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Prénom</label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control form-control-lg" ref={firstname} />
+                    <div className="form-group row">
+                        <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Prénom</label>
+                        <div className="col-sm-10">
+                            <input type="text" className="form-control form-control-lg mt-3"  ref={firstname} />
+                        </div>
                     </div>
-                </div>
-                <div className="form-group row">
-                    <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Email</label>
-                    <div className="col-sm-10">
-                        <input type="email" className="form-control form-control-lg"  ref={email}/>
+                    <div className="form-group row">
+                        <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                        <div className="col-sm-10">
+                            <input type="email" className="form-control form-control-lg mt-3" ref={email} />
+                        </div>
                     </div>
-                </div>
-                <div className="form-group row">
-                    <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">numéro de télephone</label>
-                    <div className="col-sm-10">
-                        <input type="number" className="form-control form-control-lg"  ref={tel}/>
+                    <div className="form-group row">
+                        <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg">numéro de télephone</label>
+                        <div className="col-sm-10">
+                            <input type="number" className="form-control form-control-lg mt-3" ref={tel} />
+                        </div>
                     </div>
-                </div>
-            <button onClick={AddContact}> Valider </button>
-            </form>
-
+                    <div className="d-flex justify-content-end">
+                        <button onClick={AddContact} className="btn btn-primary btn-lg btn-block mt-2"> Valider </button>
+                    </div>
+                    
+                </form>
+            </div>
 
 
         </>
