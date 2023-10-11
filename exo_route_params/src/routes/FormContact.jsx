@@ -51,7 +51,7 @@ const FormContact = () => {
             ])
 
         navigate("/Contact")
-    }
+    } 
 
     return (
         <>
