@@ -35,7 +35,7 @@ const Form = () => {
 return (
     <>
         <div className="container mt-5 border border-dark rounded-2 bg-dark text-white">
-             <button onClick={() => navigate(`/`)} className="btn btn-outline-light mt-2"> <h1>{'<'}</h1> </button>
+             <button onClick={() => navigate(`/`)} className="btn btn-outline-light mt-2" style={{border: "none"}}> <h1>{'<'}</h1> </button>
             <form className="m-2">
                 <div className="form-group row">
                     <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg"> <h3>Titre</h3></label>
