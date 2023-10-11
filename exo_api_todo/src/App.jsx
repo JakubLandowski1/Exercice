@@ -52,11 +52,11 @@ function App() {
         <div className='container'>
 
           {responseData.map((e) => (
-            <div className='p-3 bg-secondary text-white rounded m-2'>
+            <div className='p-3 bg-secondary text-white rounded m-2 border'>
               <h4>{e.title} </h4>
               
 
-              <hr />
+              <hr className='bg-white p-1 rounded '/>
 
               <div className='d-flex bg-secondary text-white rounded'>
       
