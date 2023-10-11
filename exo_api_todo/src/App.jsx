@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-      <div className='container mt-5 pb-5 bg-dark text-white rounded'>
+      <div className='container mt-5 pb-5 bg-dark text-white rounded mb-5'>
 
         <div className='d-flex justify-content-between mt-5'>
           <h2 className='m-4'>TODO</h2>
