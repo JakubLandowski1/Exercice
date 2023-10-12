@@ -1,0 +1,54 @@
+{
+    "article": [
+        {
+            "title": "Nain de jardin",
+            "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, consequuntur!",
+            "img" : "https://mon-nain-de-jardin.com/wp-content/uploads/2021/07/Hee79dee359d5408399ae1a4e3533c447W.jpg",
+            "prix": 15,
+            "id" : 1
+        },
+        {
+            "title": "Nain porte quoi",
+            "description": "description temporaire",
+            "prix": 15,
+            "id" : 2
+        },
+        {
+            "title": "Nain teressepas",
+            "description": "description temporaire",
+            "prix": 15,
+            "id" : 3
+        },
+        {
+            "title": "Nain version small",
+            "description": "description temporaire",
+            "prix": 15,
+            "id" : 4
+        },
+        {
+            "title": "Nain grande taille",
+            "description": "description temporaire",
+            "prix": 15,
+            "id" : 5
+        },
+        {
+            "title": "Nain classico",
+            "description": "description temporaire",
+            "prix": 15,
+            "id" : 6
+        }
+    ],
+    "user": [
+        {
+            "statut" : "admin",
+            "password": "123",
+            "username": "username",
+            "id": 1
+        }
+    ],
+    "panier": [
+        {
+            
+        }
+    ]
+}

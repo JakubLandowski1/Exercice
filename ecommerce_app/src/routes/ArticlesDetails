@@ -1,0 +1,17 @@
+
+
+const ArticlesDetails = () => {
+    // const navigate = useNavigate();
+    
+ 
+
+
+    return (
+        <>
+            <p>rien</p>
+        </>
+    )
+
+}
+
+export default ArticlesDetails
