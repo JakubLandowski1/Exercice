@@ -14,10 +14,10 @@ function Navbar() {
                                 <NavLink className="nav-link" to="/">Accueil</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/Contact">Login</NavLink>
+                                <NavLink className="nav-link" to="/login">Login</NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-link" to="/Contact">Panier</NavLink>
+                                <NavLink className="nav-link" to="/panier">Panier</NavLink>
                             </li>
                         </ul>
                     </div>

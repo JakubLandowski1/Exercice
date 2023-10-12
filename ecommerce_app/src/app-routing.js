@@ -15,17 +15,18 @@ const router = createBrowserRouter([
                 element: <App />,
             },
             {
-                path: "/Panier",
+                path: "/panier",
                 element: <Panier />,
             },
             {
-                path: "/Login",
+                path: "/login",
                 element: <Login />,
             },
             {
                 path: "/details/:id",
                 element: <ArticlesDetails />
-            }
+            },
+          
 
 
         ],
