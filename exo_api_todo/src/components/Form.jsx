@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import {  useRef, useState } from "react"
 import { useNavigate, useSearchParams } from "react-router-dom";
 import axios from 'axios';
 
@@ -6,13 +6,15 @@ const Form = () => {
     const navigate = useNavigate()
     const title = useRef();
     const [param] = useSearchParams();
+    const description = useRef();
+
 
 
     const addTodo = (e) => {
         e.preventDefault();
         if (param.get('mode') === 'edit') {
             const id = param.get('id')
-            axios.put(`http://localhost:5000/todo/${id}`, {title: title.current.value})
+            axios.put(`http://localhost:5000/todo/${id}`, {title: title.current.value , description: description.current.value} )
                 .then(() => {
                     navigate("/")
                 }
@@ -24,23 +26,27 @@ const Form = () => {
                 }
                 )
         }
-
-
-
-
-
     }
+
+
 
 
 return (
     <>
         <div className="container mt-5 border border-dark rounded-2 bg-dark text-white">
-             <button onClick={() => navigate(`/`)} className="btn btn-outline-light mt-2" style={{border: "none"}}> <h1>{'<'}</h1> </button>
-            <form className="m-2">
+             <button onClick={() => navigate(`/`)} className="btn btn-outline-light mt-4" style={{border: "none"}}> <h1>{'<'}</h1> </button>
+            <form className="m-4">
                 <div className="form-group row">
                     <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg"> <h3>Titre</h3></label>
                     <div className="col-sm-10">
-                        <input type="text" className="form-control form-control-lg mt-3" ref={title} />
+                        <input type="text" className="form-control form-control-lg mt-3" ref={title}  />
+                    </div>
+                </div>
+
+                <div className="form-group row">
+                    <label htmlFor="colFormLabelLg" className="col-sm-2 col-form-label col-form-label-lg"> <h3>Description</h3></label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control form-control-lg mt-3" ref={description}  />
                     </div>
                 </div>
 

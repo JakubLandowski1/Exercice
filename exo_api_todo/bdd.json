@@ -1,7 +1,8 @@
 {
   "todo": [
     {
-      "title": "todo1",
+      "title": "Rien faire se reposer",
+      "description": "pendant 1h",
       "id": 2
     },
     {
@@ -11,6 +12,18 @@
     {
       "title": "Aller bruler la golf de Romain",
       "id": 6
+    },
+    {
+      "title": "acheter du lait ",
+      "id": 7
+    },
+    {
+      "title": "acheter des clopes",
+      "id": 8
+    },
+    {
+      "title": "Faire les 10000pas ",
+      "id": 9
     }
   ]
 }
