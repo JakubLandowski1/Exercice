@@ -1,0 +1,15 @@
+{
+  "name": "manipulations_fichiers",
+  "version": "1.0.0",
+  "description": "exo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jakub",
+  "license": "ISC",
+  "dependencies": {
+    "n-readlines": "^1.0.1"
+  }
+}

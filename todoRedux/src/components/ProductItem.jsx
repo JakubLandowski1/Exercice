@@ -14,7 +14,7 @@ const ProductItem = (props) => {
 
     return (
         <>
-            <div className="container bg-dark text-white p-2 rounded m-2">
+            <div className="container bg-dark text-white p-2 rounded p-1 mb-3">
                 <div> <h3> {produit.nom} </h3> <h5> Prix : {produit.prix}€</h5></div>
                 <hr />
                 <button className="btn btn-outline-danger me-2" onClick={() => dispatch(deleteProduct(produit.id))}>Supprimer </button>
