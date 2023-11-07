@@ -1,6 +1,10 @@
 class Morpion {
   constructor() {
-    this.grille = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]];
+    this.grille = [
+      [" ", " ", " "], 
+      [" ", " ", " "], 
+      [" ", " ", " "]
+    ];
     this.joueurActuel = "X";
     this.gagnant = null;
   }
