@@ -66,10 +66,10 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
     img :{
-        marginLeft: '35%',
+        alignSelf: 'center',
         width: 100,
         height: 100,
-        margin: 30,  
+        margin: 30, 
     }
 
 })
