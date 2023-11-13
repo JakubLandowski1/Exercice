@@ -4,8 +4,7 @@ import { CATEGORIES } from "../data/data";
 const styles = StyleSheet.create({
     textStyling: {
         fontSize: 20,
-        fontStyle: 'italic',
-        color: 'black'
+        fontWeight: 'bold',
 },
 innerContainer: {
         flex: 1,
@@ -18,10 +17,10 @@ button: {
 },
 gridItem: {
     flex: 1,
-    margin: 5,
+    margin: 15,
     height: 150,
     backgroundColor: 'white',
-    borderRadius: 4,
+    borderRadius: 10,
     elevation: 4,
     shadowColor: 'black',
     shadowOpacity: 0.25,
