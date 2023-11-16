@@ -25,8 +25,5 @@ public class Exo3_3 {
             System.out.println("C'est  dans l'ordre ") ;
 
         } else {System.out.println("C'est pas dans l'ordre ") ;}
-
-
-
     }
 }
