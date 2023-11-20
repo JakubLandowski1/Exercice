@@ -24,6 +24,10 @@ import org.example.exo5_7.Exo5_7;
 import org.example.exo5_7_2.Exo5_7_2;
 import org.example.exo5_8.Exo5_8;
 import org.example.exo5_9.Exo5_9;
+import org.example.stringExo.Anagramme;
+import org.example.stringExo.Comptage;
+import org.example.stringExo.ComptageOccurence;
+import org.example.stringExo.Pyramide;
 import org.example.tab_exo1.Tab_exo1;
 import org.example.tab_exo2.Tab_exo2;
 import org.example.tab_exo3.Tab_exo3;
@@ -80,7 +84,11 @@ public class Main {
 //        Tab_exo5_5.getReadWrite();
 //        Tab_exo5_6.getReadWrite();
 //        Tab_exo5_7.getReadWrite();
-        Tab_exo5_8.getReadWrite();
+//        Tab_exo5_8.getReadWrite();
+//      Anagramme.getReadWrite();
+//        Comptage.getReadWrite();
+//        ComptageOccurence.getReadWrite();
+        Pyramide.getReadWrite();
 
     }
 
