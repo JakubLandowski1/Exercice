@@ -22,8 +22,8 @@ const PokemonDetails = ({ url }) => {
 
   return (
     <View >
-        
-       <Image source={{uri : pokemonDetails.sprites.front_default }} style={styles.img}/> 
+
+      <Image source={{ uri: pokemonDetails.sprites.front_default }} style={styles.img} />
       <FlatList
         data={pokemonDetails.types}
         renderItem={({ item }) => (

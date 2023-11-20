@@ -11,7 +11,9 @@ public class Exo3_6 {
 
         if (nombre % 3 == 0) {
             System.out.println("Le nombre est divisible par 3");
+
         } else {
+
             System.out.println("Le nombre n'est pas divisible par 3");
         }
     }
