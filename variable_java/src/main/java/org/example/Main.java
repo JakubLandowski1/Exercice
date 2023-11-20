@@ -29,6 +29,14 @@ import org.example.tab_exo2.Tab_exo2;
 import org.example.tab_exo3.Tab_exo3;
 import org.example.tab_exo4.Tab_exo4;
 import org.example.tab_exo5.Tab_exo5;
+import org.example.tab_exo5_1.Tab_exo5_1;
+import org.example.tab_exo5_2.Tab_exo5_2;
+import org.example.tab_exo5_3.Tab_exo5_3;
+import org.example.tab_exo5_4.Tab_exo5_4;
+import org.example.tab_exo5_5.Tab_exo5_5;
+import org.example.tab_exo5_6.Tab_exo5_6;
+import org.example.tab_exo5_7.Tab_exo5_7;
+import org.example.tab_exo5_8.Tab_exo5_8;
 import org.example.tab_exo6.Tab_exo6;
 import org.example.tab_exo7.Tab_exo7;
 
@@ -63,8 +71,16 @@ public class Main {
 //         Tab_exo3.getReadWrite();
 //         Tab_exo4.getReadWrite();
 //         Tab_exo5.getReadWrite();
-//         Tab_exo6.getReadWrite();
 //         Tab_exo7.getReadWrite();
+//          Tab_exo5_1.getReadWrite();
+//         Tab_exo6.getReadWrite();
+//        Tab_exo5_2.getReadWrite();
+//        Tab_exo5_3.getReadWrite()
+//          Tab_exo5_4.getReadWrite();
+//        Tab_exo5_5.getReadWrite();
+//        Tab_exo5_6.getReadWrite();
+//        Tab_exo5_7.getReadWrite();
+        Tab_exo5_8.getReadWrite();
 
     }
 
