@@ -3,6 +3,7 @@ package org.example.stringExo;
 public class ComptageOccurence {
 
     public static void getReadWrite() {
+
         String mot = "Anagramme";
         String occurrence = "a";
 

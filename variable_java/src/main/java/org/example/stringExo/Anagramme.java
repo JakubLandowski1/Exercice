@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Anagramme {
 
     public static void getReadWrite() {
-        String  mot = "aubba";
+        String  mot = "aube";
         String  motDeux = "beau";
 
         char [] tab = mot.toCharArray();
