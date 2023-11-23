@@ -22,4 +22,6 @@ public class Compte {
     public String toString() {
         return String.format("Le numero du compte est %d \n Le solde actuel : %.2f", code, solde);
     }
+
 }
+
