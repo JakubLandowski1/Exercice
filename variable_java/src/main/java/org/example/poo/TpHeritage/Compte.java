@@ -1,16 +1,13 @@
 package org.example.poo.TpHeritage;
 
 public class Compte {
-    public static int counter = 0;
+    public static int counter = 1;
     public int code;
     public double solde;
 
-    static {
-        counter++;
-    }
 
     public Compte(double solde) {
-        this.code = counter;
+        this.code = counter++;
         this.solde = solde;
     }
 
@@ -23,6 +20,6 @@ public class Compte {
     }
 
     public String toString() {
-        return String.format("Le numero du compte est %d /n Le solde actuel : %f", code, solde);
+        return String.format("Le numero du compte est %d \n Le solde actuel : %.2f", code, solde);
     }
 }

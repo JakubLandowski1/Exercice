@@ -4,11 +4,14 @@ public class CompteEpargne extends Compte {
 
     public double interet ;
 
-    public CompteEpargne(double solde) {
+    public CompteEpargne(double solde, double interet) {
         super(solde);
+        this.interet = interet;
     }
 
-    public void calculInteret(double interet) {
+    public void calculiInterest() {
         solde= solde*(interet/100+1);
     }
+
+
 }
