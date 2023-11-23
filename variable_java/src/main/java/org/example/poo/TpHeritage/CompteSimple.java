@@ -7,7 +7,7 @@ public class CompteSimple extends Compte{
         this.decouvert = decouvert;
     }
 
-    public void retrait (int ret) {
+    public void retrait (double ret) {
         if (decouvert >  solde) {
             System.out.println("Erreur pas assez de fond");
         } else {

@@ -14,11 +14,11 @@ public class Compte {
         this.solde = solde;
     }
 
-    public void versement(int ajout) {
+    public void versement(double ajout) {
         solde = solde + ajout;
     }
 
-    public void retrait(int ret) {
+    public void retrait(double ret) {
         solde = solde - ret;
     }
 
