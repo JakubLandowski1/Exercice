@@ -26,7 +26,7 @@ public class IHM {
 
         Hotel hotel = new Hotel(nomHotel, nombreChambres);
 
-        
+
         for (int i = 1; i <= nombreChambres; i++) {
             Chambre chambre = new Chambre(i, 100.0, 2);
             hotel.ajouterChambre(chambre);
