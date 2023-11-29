@@ -6,10 +6,10 @@ import java.util.List;
 
 public class Library {
 
-    List<Loan> loans = new ArrayList<>();
-    List<Book> books = new ArrayList<>();
-    List<Book> foundBooksByAuthor = new ArrayList<>();
-    List<Book> foundBooks = new ArrayList<>();
+    ArrayList<Loan> loans = new ArrayList<>();
+    ArrayList<Book> books = new ArrayList<>();
+    ArrayList<Book> foundBooksByAuthor = new ArrayList<>();
+
 
 
     public void addBook(Book book) {
@@ -20,18 +20,20 @@ public class Library {
         books.remove(idBook);
     }
 
-    public Book foundBookByTitle(String title) {
-        for (int i = 0; i < books.size(); i++) {
+    public ArrayList<Book> foundBookByTitle(String title) {
+        ArrayList<Book> foundBooks = new ArrayList<>();
+
             for (Book book : books) {
                 if (book.getTitle().equals(title)) {
-                    return book;
+                    foundBooks.add(book);
                 }
             }
-        }
-        return null;
+
+        return foundBooks;
     }
 
-    public Book foundBookByAuthor(String author) {
+    public ArrayList<Book> foundBookByAuthor(String author) {
+        ArrayList<Book> foundBooksByAuthor = new ArrayList<>();
 
         for (Book book : books) {
             if (book.getAuthor().equals(author)) {
@@ -39,7 +41,7 @@ public class Library {
             }
         }
 
-        return null;
+        return foundBooksByAuthor;
     }
 
     public void loanBook(String idBook, Person person) {
