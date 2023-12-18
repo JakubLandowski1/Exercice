@@ -26,6 +26,6 @@ public class Invoice {
 
 
     public void getTotalPrice () {
-         
+
     }
 }
