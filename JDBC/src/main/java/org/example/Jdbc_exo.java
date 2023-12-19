@@ -57,15 +57,20 @@ public class Jdbc_exo {
             }
             statement2.close(); */
 
-            System.out.println("Merci de saisir le prénom : ");
+          /*  System.out.println("Merci de saisir le prénom : ");
             String firstName = scanner.next();
             System.out.println("Merci de saisir le nom : ");
             String lastName = scanner.next();
 
-            String request = "DELETE FROM etudiant WHERE prenom = ? AND nom = ? ";
+            String request = "DELETE FROM etudiant WHERE prenom = ? AND nom = ? ";  */
+
+            System.out.println("Merci de saisir l'id: ");
+            int id = scanner.nextInt();
+
+            String request = "DELETE FROM etudiant WHERE id = ? ";
             PreparedStatement preparedStatement = connection.prepareStatement(request);
-            preparedStatement.setString(1,firstName);
-            preparedStatement.setString(2,lastName);
+            preparedStatement.setInt(1,id);
+
             preparedStatement.executeUpdate();
 
 
