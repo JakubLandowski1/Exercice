@@ -5,11 +5,12 @@ import org.example.models.Client;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientDAO extends BaseDAO<Client> {
 // Constructor
-    protected ClientDAO(Connection connection) {
+    public ClientDAO(Connection connection) {
         super(connection);
     }
 
@@ -46,11 +47,32 @@ public class ClientDAO extends BaseDAO<Client> {
 
     @Override
     public Client get(int id) throws SQLException {
-        return null;
+        Client client = null;
+        request = "SELECT * FROM client WHERE id = ?";
+        statement = _connection.prepareStatement(request);
+        statement.setInt(1, id);
+        resultSet = statement.executeQuery();
+        if(resultSet.next()){
+            client = new Client(resultSet.getInt("id"),
+            resultSet.getString("prenom"),
+            resultSet.getString("nom"),
+            resultSet.getString("tel"));
+        }
+        return client;
     }
 
     @Override
     public List<Client> get() throws SQLException {
+        List<Client> result = new ArrayList<>();
+        statement = _connection.prepareStatement(request);
+        resultSet = statement.executeQuery();
+        while (resultSet.next()){
+            Client client = new Client( resultSet.getInt("id"),
+                    resultSet.getString("prenom"),
+                    resultSet.getString("nom"),
+                    resultSet.getString("tel"));
+            result.add(client);
+        }
         return null;
     }
 }

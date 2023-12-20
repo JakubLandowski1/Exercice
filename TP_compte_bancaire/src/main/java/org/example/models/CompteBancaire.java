@@ -48,7 +48,7 @@ public class CompteBancaire {
 
 
 // Constructor
-    public CompteBancaire(int id, double solde, List<Operation> operations, Client client) {
+    public CompteBancaire(int id, double solde, Client client) {
         this.id = id;
         this.solde = solde;
         this.operations = new ArrayList<>();
