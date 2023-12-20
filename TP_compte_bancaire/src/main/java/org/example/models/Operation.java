@@ -43,6 +43,17 @@ public class Operation {
         this.statut = statut;
     }
 
+    public Operation() {
+
+    }
 
 
+    @Override
+    public String toString() {
+        return "Operation{" +
+                "id=" + id +
+                ", montant=" + montant +
+                ", statut=" + statut +
+                '}';
+    }
 }

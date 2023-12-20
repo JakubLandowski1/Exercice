@@ -16,12 +16,13 @@ public class ClientDAO extends BaseDAO<Client> {
 
     @Override
     public boolean save(Client element) throws SQLException {
-       request = "INSERT INTO client (nom, prenom,tel) VALUES (?,?, ?)";
+       request = "INSERT INTO clients (nom, prenom,tel) VALUES (?,?, ?)";
        statement = _connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
        statement.setString(1, element.getNom());
        statement.setString(2, element.getPrenom());
        statement.setString(3, element.getTel());
        int nbRows = statement.executeUpdate();
+       resultSet = statement.getGeneratedKeys();
         if(resultSet.next()){
             element.setId(resultSet.getInt(1));
         }
@@ -30,7 +31,7 @@ public class ClientDAO extends BaseDAO<Client> {
 
     @Override
     public boolean update(Client element) throws SQLException {
-        request = "UPDATE person SET prenom = ?, nom = ?, tel = ? WHERE id = ?";
+        request = "UPDATE clients SET prenom = ?, nom = ?, tel = ? WHERE id = ?";
         statement = _connection.prepareStatement(request);
         statement.setString(1, element.getPrenom());
         statement.setString(2, element.getNom());
@@ -48,12 +49,12 @@ public class ClientDAO extends BaseDAO<Client> {
     @Override
     public Client get(int id) throws SQLException {
         Client client = null;
-        request = "SELECT * FROM client WHERE id = ?";
+        request = "SELECT * FROM clients WHERE client_id = ?";
         statement = _connection.prepareStatement(request);
         statement.setInt(1, id);
         resultSet = statement.executeQuery();
         if(resultSet.next()){
-            client = new Client(resultSet.getInt("id"),
+            client = new Client(resultSet.getInt(1),
             resultSet.getString("prenom"),
             resultSet.getString("nom"),
             resultSet.getString("tel"));

@@ -65,10 +65,23 @@ public class Client {
         this.comptes =new ArrayList<>();
     }
 
+    public  Client () {
+        this.comptes =new ArrayList<>();
+    }
+
 // Méthodes
 
     public void ajouterCompte(CompteBancaire compte) {
         comptes.add(compte);
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", tel='" + tel + '\'' +
+                '}';
+    }
 }

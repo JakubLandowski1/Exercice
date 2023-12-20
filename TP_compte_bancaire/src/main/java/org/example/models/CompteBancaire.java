@@ -55,6 +55,10 @@ public class CompteBancaire {
         this.client = client;
     }
 
+    public CompteBancaire () {
+        this.operations = new ArrayList<>();
+    }
+
 // Méthodes
 
   public void effectuerOperation(Operation operation) {
@@ -66,4 +70,11 @@ public class CompteBancaire {
         }
     }
 
+    @Override
+    public String toString() {
+        return "CompteBancaire{" +
+                "id=" + id +
+                ", solde=" + solde +
+                '}';
+    }
 }
