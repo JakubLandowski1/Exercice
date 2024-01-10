@@ -52,6 +52,19 @@ public class Product {
     private Long id;
 
     private String marque;
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", marque='" + marque + '\'' +
+                ", reference='" + reference + '\'' +
+                ", dateAchat=" + dateAchat +
+                ", prix=" + prix +
+                ", stock=" + stock +
+                '}';
+    }
+
     private String reference;
     private Date dateAchat;
 

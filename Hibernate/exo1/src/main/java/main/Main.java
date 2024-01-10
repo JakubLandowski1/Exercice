@@ -3,8 +3,11 @@ package main;
 import DAO.ProductDAO;
 import entity.Product;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -17,8 +20,8 @@ public class Main {
         Product product5 = new Product("marque5", "ref1", new Date(), 10.0, 10);
 
 
-        ProductDAO dao = new ProductDAO();
-        dao.AddProduct(product1);
+       ProductDAO dao = new ProductDAO();
+      /*   dao.AddProduct(product1);
         dao.AddProduct(product2);
         dao.AddProduct(product3);
         dao.AddProduct(product4);
@@ -27,7 +30,8 @@ public class Main {
 
         System.out.println(dao.ShowInformation(2L));
 
-        dao.DeleteProduct(3L);
+   dao.DeleteProduct(3L);
+
         Product product = dao.ShowInformation(1L);
         product.setPrix(200.0);
         dao.UpdateProduct(product, 1L);
@@ -42,17 +46,49 @@ public class Main {
         for (Product i : list1) {
             System.out.println(i);
         }
+        */
+/*
+        System.out.println("Veuillez donner une date");
+        Scanner scanner = new Scanner(System.in);
+        String dateUn = scanner.nextLine();
+        String dateDeux = scanner.nextLine();
 
-        List<Product> listProduitDate =  dao.ShowProductsByDate(new Date(2023,12,01), new Date(2023,01,10));
-        for (Product i : listProduitDate) {
-            System.out.println(i);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date1 = format.parse(dateUn);
+            Date date2 = format.parse(dateDeux);
+
+            List<Product> listProduitDate =  dao.ShowProductsByDate(date1, date2);
+            for (Product i : listProduitDate) {
+                System.out.println(i);
+            }
+
+
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
         }
+        */
 
 
 
+  /*  System.out.println("Veuillez donner un nombre (stock)");
+        Scanner scanner = new Scanner(System.in);
+        int s = scanner.nextInt();
+        List<Product> listProduitDate =  dao.ShowProductsByStock(s);
+        System.out.println(listProduitDate); */
 
 
+       /* System.out.println("Veuillez saisir la marque");
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        List<Product> listProduitByMarque = dao.ShowProductsByMarque(s);
+        System.out.println(listProduitByMarque); */
 
+
+        System.out.println("Veuillez saisir la marque");
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        List<Product> listProduit = dao.ShowListProductByMarque(s);
+        System.out.println(listProduit);
     }
-
 }

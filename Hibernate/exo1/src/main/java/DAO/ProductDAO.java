@@ -100,4 +100,51 @@ public class ProductDAO {
     }
 
 
+    public List<Product> ShowProductsByStock(int stock) {
+        Session session = sessionFactory.openSession();
+        Query<Product> productQuery = session.createQuery("SELECT reference, id from Product where stock < :s").setParameter("s", stock);
+
+        List<Product> productList = productQuery.list();
+
+        session.close();
+        return productList;
+    }
+
+    public List<Product> ShowProductsByMarque(String marque) {
+        Session session = sessionFactory.openSession();
+        Query<Product> productQuery = session.createQuery("SELECT stock from Product where marque = :m").setParameter("m", marque);
+
+        List<Product> productList = productQuery.list();
+
+        session.close();
+        return productList;
+    }
+
+
+    public List<Product> ShowListProductByMarque(String marque) {
+        Session session = sessionFactory.openSession();
+        Query<Product> productQuery = session.createQuery("from Product where marque = :m").setParameter("m", marque);
+
+        List<Product> productList = productQuery.list();
+
+        session.close();
+        return productList;
+    }
+
+
+
+    public int DeleteListProductByMarque(String marque) {
+        Session session = sessionFactory.openSession();
+        Query productQuery = session.createQuery("DELETE from Product where marque = :m").setParameter("m", marque);
+
+        int productList = productQuery.executeUpdate();
+
+        session.close();
+        return productList;
+    }
+
+
+    public static void main(String[] args) {
+        
+    }
 }
