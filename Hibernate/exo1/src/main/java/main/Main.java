@@ -85,10 +85,13 @@ public class Main {
         System.out.println(listProduitByMarque); */
 
 
-        System.out.println("Veuillez saisir la marque");
+        /* System.out.println("Veuillez saisir la marque");
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         List<Product> listProduit = dao.ShowListProductByMarque(s);
-        System.out.println(listProduit);
+        System.out.println(listProduit); */
+
+        System.out.println(dao.CountCost());
+
     }
 }

@@ -144,7 +144,12 @@ public class ProductDAO {
     }
 
 
-    public static void main(String[] args) {
-        
+    public Double CountCost() {
+        Session session = sessionFactory.openSession();
+        Query<Double> m = session.createQuery("SELECT avg(prix) FROM Product ");
+
+        Double moyenne = m.getSingleResult();
+        session.close();
+        return moyenne;
     }
 }
