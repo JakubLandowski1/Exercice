@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <header>
+        <h1> Inscription</h1>
+        <a th:href="@{/}">Accueil</a>
+        <hr>
+    </header>
+
+    <main>
+        <form th:action="@{/addrabbit}" th:object="${student}" method="get">
+            <div>
+                <label for="name" > Nom : </label>
+                <input type="text" id="name" th:field="*{lastname}">
+            </div>
+            <div>
+                <label for="breed" > Prénom : </label>
+                <input type="text" id="breed" th:field="*{breed}">
+            </div>
+            <div>
+                <label for="breed" > Age : </label>
+                <input type="text" id="breed" th:field="*{breed}">
+            </div>
+            <div>
+                <label for="breed" > Email : </label>
+                <input type="text" id="breed" th:field="*{breed}">
+            </div>
+            <button>Envoyer</button>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

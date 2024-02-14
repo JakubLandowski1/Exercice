@@ -8,10 +8,33 @@
 
     <header>
         <h1> Détails Etudiants </h1>
+        <nav>
+            <a th:href="@{/}">Accueil</a>
+        </nav>
     </header>
     <hr>
 
     <main>
+
+
+            <table class="table">
+                <thead>
+                    <th>Prenom</th>
+                    <th>Nom </th>
+                    <th>Détails </th>
+                </thead>
+                <tbody th:each="s : ${students}">
+                    <tr>
+                        <td th:text="${s.firstname}"> </td>
+                        <td th:text="${s.lastname}"> </td>
+                        <td> <a th:href="@{/detail/{id}(id=${s.id})}">Details</a> </td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+
 
     </main>
 
