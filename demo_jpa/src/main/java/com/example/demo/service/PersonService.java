@@ -14,6 +14,5 @@ public interface PersonService {
 
     Person update(int id, Person person);
 
-    Person getPersonById(int id){
-    }
+    Person getPersonById(int id);
 }

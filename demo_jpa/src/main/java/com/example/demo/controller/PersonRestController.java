@@ -31,12 +31,12 @@ public class PersonRestController {
 
 
     @GetMapping("/{id}")
-    public User getUserById(@PathVariable Long id) {
-        return personService.get(id);
+    public Person getUserById(@PathVariable int id) {
+        return personService.getPersonById(id);
     }
 
     @PutMapping("/update/{id}")
-    public User updateOnePersonn(@PathVariable int id, @RequestBody Person person) {
+    public Person updateOnePersonn(@PathVariable int id, @RequestBody Person person) {
         return personService.update(id, person);
 
     }
